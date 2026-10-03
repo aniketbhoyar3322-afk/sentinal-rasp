@@ -267,9 +267,41 @@
         </section>
     </main>
 
+    <!-- FULLSCREEN RASP LOCKOUT OVERLAY (ACTIVATES ON HIGH RISK) -->
+    <div id="lockout-modal" class="fixed inset-0 bg-slate-950/95 backdrop-blur-2xl z-[100] hidden flex flex-col items-center justify-center p-6 text-center animate-fade-in">
+        <div class="p-5 bg-rose-500/20 border-2 border-rose-500/80 rounded-3xl mb-6 text-rose-500 shadow-2xl shadow-rose-500/30 animate-pulse">
+            <i data-lucide="shield-alert" class="w-16 h-16"></i>
+        </div>
+        
+        <h2 class="text-3xl font-black text-rose-500 tracking-wider mb-2 uppercase">Session Terminated</h2>
+        <p class="text-sm text-slate-300 max-w-md mb-6 leading-relaxed">
+            Critical system compromise detected on host device. SentinelRASP engine has enforced an immediate runtime session shutdown to prevent unauthorized banking transactions.
+        </p>
+
+        <div class="bg-rose-950/60 border border-rose-800/80 p-4 rounded-xl text-left w-full max-w-sm mb-6 mono text-xs space-y-1.5">
+            <div class="flex justify-between text-rose-300">
+                <span class="text-slate-400">Threat Level:</span>
+                <span class="font-bold">CRITICAL (SCORE &gt;= 70)</span>
+            </div>
+            <div class="flex justify-between text-rose-300">
+                <span class="text-slate-400">Action Taken:</span>
+                <span class="font-bold">CAPABILITIES_REVOKED</span>
+            </div>
+            <div class="flex justify-between text-rose-300">
+                <span class="text-slate-400">Incident ID:</span>
+                <span class="font-bold" id="lockout-incident-id">RSP-99021</span>
+            </div>
+        </div>
+
+        <button onclick="location.reload()" class="px-8 py-3 bg-rose-600 hover:bg-rose-500 text-white font-extrabold rounded-xl text-xs uppercase tracking-widest shadow-lg shadow-rose-600/30 transition-all scale-100 hover:scale-105">
+            Re-Authenticate Session
+        </button>
+    </div>
+
+    <!-- Scripts execute AFTER DOM elements are rendered -->
     <script src="script.js"></script>
     <script>
-        lucide.createIcons();
+        if (window.lucide) lucide.createIcons();
     </script>
 </body>
 </html>
