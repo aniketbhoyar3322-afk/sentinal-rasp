@@ -20,3 +20,37 @@ SentinelRASP is a real-time application security shield built for high-security 
 ---
 
 ## 🏗️ System Architecture
+
+┌──────────────────────────┐      ┌──────────────────────────┐
+│  Device Telemetry / CLI  │ ───> │  FastAPI RASP Core Engine│
+│  (0/1 Security Signals)  │      │  (Risk Scoring Engine)   │
+└──────────────────────────┘      └────────────┬─────────────┘
+│
+▼
+┌──────────────────────────┐      ┌──────────────────────────┐
+│  Live Web Dashboard      │ <─── │ Kimi LLM Autonomous AI   │
+│  (Tailwind UI & Matrix)  │      │  (Mitigation Generation) │
+└──────────────────────────┘      └──────────────────────────┘
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend Core**: FastAPI, Python 3.13, Uvicorn
+- **AI Intelligence**: Kimi LLM Integration (OpenAI API Standard)
+- **Frontend Dashboard**: Tailwind CSS, Lucide Icons, Vanilla JavaScript
+- **CLI Simulation**: Python Subprocess Telemetry Terminal
+- **Version Control & Hosting**: Git, GitHub Pages (`.nojekyll` static bypass)
+
+---
+
+## ⚡ Quick Start & Setup
+
+### 1. Prerequisites & Installation
+
+Clone the repository and install required Python packages:
+
+```bash
+git clone [https://github.com/aniketbhoyar3322-afk/sentinal-rasp.git](https://github.com/aniketbhoyar3322-afk/sentinal-rasp.git)
+cd sentinal-rasp
+pip install fastapi uvicorn pydantic python-dotenv openai
