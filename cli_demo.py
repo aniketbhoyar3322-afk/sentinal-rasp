@@ -30,4 +30,8 @@ while True:
             data = json.loads(resp.read().decode('utf-8'))
             print(f"➜ Synced! Score: {data['score']} | Status: {data['status']}\n")
     except Exception as e:
+<<<<<<< HEAD
         print(f"❌ Error connecting to server: {e}\n")
+=======
+        print(f"❌ Error connecting to server: {e}\n")
+>>>>>>> d182c2d (security: remove sensitive .env file from repository tracking)
