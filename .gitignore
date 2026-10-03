@@ -1,4 +1,5 @@
 .env
-pycache/
-*.db
+__pycache__/
+*.pyc
 .vscode/
+node_modules/
