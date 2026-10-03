@@ -76,19 +76,22 @@
                 </h2>
                 
                 <div class="grid grid-cols-3 gap-3">
-                    <button onclick="setPreset('clean')" class="group p-3 rounded-xl bg-slate-900/80 hover:bg-emerald-500/10 border border-slate-800 hover:border-emerald-500/50 transition-all text-center">
-                        <i data-lucide="shield" class="w-5 h-5 mx-auto mb-1 text-slate-400 group-hover:text-emerald-400 transition-colors"></i>
-                        <span class="text-xs font-semibold text-slate-300 group-hover:text-emerald-300 block">Clean</span>
+                    <!-- Clean Preset -->
+                    <button id="preset-clean" onclick="setPreset('clean')" class="group p-3 rounded-xl bg-slate-900/80 border border-slate-800 transition-all text-center">
+                        <i data-lucide="shield" class="w-5 h-5 mx-auto mb-1 text-slate-400 transition-colors"></i>
+                        <span class="text-xs font-semibold text-slate-300 block">Clean</span>
                     </button>
                     
-                    <button onclick="setPreset('suspicious')" class="group p-3 rounded-xl bg-slate-900/80 hover:bg-amber-500/10 border border-slate-800 hover:border-amber-500/50 transition-all text-center">
-                        <i data-lucide="alert-triangle" class="w-5 h-5 mx-auto mb-1 text-slate-400 group-hover:text-amber-400 transition-colors"></i>
-                        <span class="text-xs font-semibold text-slate-300 group-hover:text-amber-300 block">Moderate</span>
+                    <!-- Moderate Preset -->
+                    <button id="preset-suspicious" onclick="setPreset('suspicious')" class="group p-3 rounded-xl bg-slate-900/80 border border-slate-800 transition-all text-center">
+                        <i data-lucide="alert-triangle" class="w-5 h-5 mx-auto mb-1 text-slate-400 transition-colors"></i>
+                        <span class="text-xs font-semibold text-slate-300 block">Moderate</span>
                     </button>
                     
-                    <button onclick="setPreset('compromised')" class="group p-3 rounded-xl bg-slate-900/80 hover:bg-rose-500/10 border border-slate-800 hover:border-rose-500/50 transition-all text-center">
-                        <i data-lucide="skull" class="w-5 h-5 mx-auto mb-1 text-slate-400 group-hover:text-rose-400 transition-colors"></i>
-                        <span class="text-xs font-semibold text-slate-300 group-hover:text-rose-300 block">Critical</span>
+                    <!-- Critical Preset -->
+                    <button id="preset-compromised" onclick="setPreset('compromised')" class="group p-3 rounded-xl bg-slate-900/80 border border-slate-800 transition-all text-center">
+                        <i data-lucide="skull" class="w-5 h-5 mx-auto mb-1 text-slate-400 transition-colors"></i>
+                        <span class="text-xs font-semibold text-slate-300 block">Critical</span>
                     </button>
                 </div>
             </div>
@@ -198,7 +201,7 @@
                 </div>
             </div>
 
-            <!-- NEW: BANKING APPLICATION CAPABILITIES MATRIX -->
+            <!-- BANKING APPLICATION CAPABILITIES MATRIX -->
             <div class="glass-panel rounded-2xl p-6">
                 <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 flex items-center space-x-2">
                     <i data-lucide="landmark" class="w-4 h-4 text-blue-400"></i>
